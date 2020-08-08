@@ -7,3 +7,5 @@ The files that I changed are as follows:
 1. p1bitmanip: bits.c
 2. p3cache: csim.c
 3. p4shell: myshell.c
+
+Please note these will not run or may not make total sense, as I have removed some code in order to prevent my work from being plagurized by following cohorts of CS 154. 

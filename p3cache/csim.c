@@ -88,24 +88,10 @@ int main(int argc, char **argv)
         }
     }
 
-
-	char line[1000];
-	char type;
-	long long int address;
-	long long int size;
-    int hits = 0;
-    int misses = 0;
-    int evictions = 0;
-    long long int setbits = 0;
-    long long int tag = 0;
-
+"[redacted]"	
 
 	while((fgets(line, 1000, fp)) != NULL) {
-        int highestnum = 0; //keep track of LRU
-        int success = 0;
-		sscanf(line," %c %llx,%lld" , &type, &address, &size); 
-		printf(" %c %llx %lld\n", type, address, size);
-
+        "[redacted]"
             setbits = bitmanip(address, blockbits, setindex);
             //printf("setbits = %llx\n", setbits);
 
@@ -138,20 +124,7 @@ int main(int argc, char **argv)
                 }
             }
 
-            if (success == 0) {
-                for (int i = 0; i <= (linesps-1); i++) {
-                    if (sets[setbits][i].notused>highestnum)
-                    highestnum = sets[setbits][i].notused;
-                }
-                for (int i = 0; i <= (linesps - 1); i++) {
-                    if (sets[setbits][i].notused == highestnum) {
-                        sets[setbits][i].validbit = 1;
-                        sets[setbits][i].tagbit = tag;
-                        sets[setbits][i].notused = 0;
-                        misses++;
-                        evictions++;
-                        printf("miss eviction\n");
-                        break;
+            "[redacted]"
                     }
                 }
             }

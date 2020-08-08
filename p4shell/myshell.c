@@ -27,21 +27,7 @@ void myPrint(char *msg)
 //Function to return list of argumenets
 char **list_args(char *command)
 {
-    char *tmp_p2;
-    char **listargs = (char **)calloc(30, sizeof(char *));
-    char *arguement = strtok_r(command, " ", &tmp_p2);
-    int i = 0;
-
-    while (arguement)
-    {
-        listargs[i] = arguement;
-        i++;
-        arguement = strtok_r(NULL, " ", &tmp_p2);
-        //printf("%s", arguement);
-    }
-    listargs[i] = NULL;
-
-    return listargs;
+    "[redacted]"
 }
 
 //Function to create a fork that waits for the previous child process to finish
@@ -225,7 +211,7 @@ int main(int argc, char *argv[])
                 }
 
                 currentcommand = strtok_r(currentcommand, ">", &tmp_p2);
-                char *checker2 = trim(currentcommand);
+                "[redacted]"
                 if (checker2 == NULL)
                 {
                     myPrint(error_message);
@@ -248,22 +234,7 @@ int main(int argc, char *argv[])
 
                 if ((checker < 1) && (checker3 > 0))
                 {
-                    char origibuff[2000] = {0};
-                    
-                    int tmpfile = open("tmp", O_CREAT | O_RDWR | O_TRUNC, 0664);
-                    int i;
-
-                    read(checker3, origibuff, 2000);
-                    for (i = 0; i < 2000; i++)
-                    {
-                        if (origibuff[i] == '\0')
-                        {
-                            break;
-                        }
-                    }
-                    write(tmpfile, origibuff, i);
-
-                    outfile = open(redir_filename, O_CREAT | O_RDWR | O_TRUNC , 0664);
+                    "[redacted]"
                 }
                 else if ((checker < 1) && (checker3 < 1))
                 {
@@ -382,10 +353,7 @@ int main(int argc, char *argv[])
             // ----------------------------------------------- print working directory
             else if (strcmp(firstarg, "pwd") == 0)
             {
-                char dirbuff[1000];
-                getcwd(dirbuff, sizeof(dirbuff));
-                myPrint(dirbuff);
-                myPrint("\n");
+                "[redacted]"
             }
             // ---------------------------------------------------- Fork if nothing else
 
@@ -398,13 +366,13 @@ int main(int argc, char *argv[])
                 // -------------------------------------------------- Redirection
                 if ((redir == 1) || (adv_redir == 1))
                 {
-                    dup2(outfile, STDOUT_FILENO);
+                    "[redacted]"
                 }
 
                 createfork(args[0], args);
                 if ((redir == 1) || (adv_redir == 1))
                 {
-                    dup2(original, STDOUT_FILENO);
+                    "[redacted]"
                 }
             }
 
